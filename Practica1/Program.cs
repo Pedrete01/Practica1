@@ -81,7 +81,7 @@ namespace Practica1
             if (palabras != null && palabras.Length > 0)
             {
                 string[] palabra = palabras.Split(' ');
-                if (palabra[0] != null && palabra[1] != null)
+                if (palabra.Length > 1 && palabra[0] != null && palabra[1] != null)
                 {
                     string cadenaFinal = cad.Replace(palabra[0], palabra[1]);
 
@@ -89,6 +89,10 @@ namespace Practica1
                     Console.WriteLine(cad + "\n");
                     Console.WriteLine("La cadena con la sustitución: \n");
                     Console.WriteLine(cadenaFinal + "\n");
+                }
+                else
+                {
+                    Console.WriteLine("\nHa ocurrido un error.\n");
                 }
             }
         }
